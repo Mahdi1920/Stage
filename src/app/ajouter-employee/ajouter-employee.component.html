@@ -1,0 +1,31 @@
+<h1 class="text-center">Ajouter Un Employee</h1>
+    <form [formGroup]="compteForm" (ngSubmit)="onAjout" >
+        <div class="form-group">
+            <label for="nom">Nom & Prénom:</label>
+            <input type="text" id="nom" class="form-control" formControlName="nom" />
+        </div>
+                    
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="form-control" formControlName="email" />
+        </div>
+
+        <div class="form-group">
+            <label for="tel">Telephone:</label>
+            <input type="text" id="tel" class="form-control" formControlName="tel" />
+        </div>
+
+        <div class="form-check-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="genre" value="Homme"formControlName="genre" >Homme
+            </label>
+        </div>
+
+        <div class="form-check-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="genre" value="Femme" formControlName="genre">Femme
+            </label>
+        </div>
+        <br>
+        <button class="btn btn-primary " >Envoyer</button>
+    </form>

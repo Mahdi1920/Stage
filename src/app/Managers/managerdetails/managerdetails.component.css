@@ -1,0 +1,47 @@
+
+/*.c1{
+    }*/
+/*.style{
+    background :url('/assets/background7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    width: 1570px;
+    height: 670px ;
+    }*/
+/*.profile{
+    border-radius: 50%;
+    width:204px;
+    height: 204px;
+    }*/
+h4{
+    background-color: rgba(0,0,0,0.1) !important;
+    
+    margin-right: 200px;
+    margin-top: 50px;
+    margin-left: 200px;
+    
+    }
+    .image{position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        display: block;
+        background: url("/assets/background7.jpg");
+            background-size: cover;
+        
+            height: 753px ;
+            background-color: rgba(0, 0, 0, 0.8);
+        -webkit-filter: blur(2px);
+        -moz-filter: blur(2px);
+        -o-filter: blur(2px);
+        -ms-filter: blur(2px);
+        filter: blur(2px);}
+        .contenu{
+          position: fixed;
+          left: 0;
+          right: 0;
+          z-index: 9999;
+          margin-left: 20px;
+          margin-right: 20px;
+        }

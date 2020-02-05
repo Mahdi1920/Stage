@@ -1,0 +1,18 @@
+input.ng-valid{    border-left: 2px solid green;}
+input.ng-invalid{    border-left: 2px solid red;} 
+
+body{
+    background :url('/assets/background7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    height: 775px ;    
+    }
+
+h1{
+    background-color: rgba(0,0,0,0.1) !important;
+    padding-bottom: 8px;
+    margin-right: 220px;
+    margin-bottom: 18px;
+    margin-left: 220px;
+    }

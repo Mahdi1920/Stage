@@ -1,0 +1,34 @@
+h2{
+    margin-top: 50px;
+}
+/*
+body{
+    background :url('/assets/employes2.jpg');
+    background-size: cover;
+    height: 752px ;
+    width: 1535px;
+    background-color: rgba(0, 0, 0, 0.3);
+}*/
+.image{position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    background: url("/assets/employes2.jpg");
+        background-size: cover;
+    
+        height: 753px ;
+        background-color: rgba(0, 0, 0, 0.8);
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);}
+    .contenu{
+      position: fixed;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      margin-left: 20px;
+      margin-right: 20px;
+    }

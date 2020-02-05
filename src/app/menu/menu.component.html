@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+<nav class=" navbar navbar-expand-sm bg-light justify-content-center sticky-top" >
+    <img src="../assets/logo.png" alt="Logo" style=" height: 50px;"  >
+    <ul class="navbar-nav " >
+        
+        <li class="nav-item " >
+            <a class="nav-link bouton" [routerLink]="['/Manager',id]"><i class="fa fa-fw fa-user"></i>Profile</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link bouton" [routerLink]="['/Employee']">Employees</a>
+        </li>
+
+        <li class="nav-item  " >
+            <a class="nav-link bouton" [routerLink]="['/client']" >Clients</a>
+        </li>
+
+         
+           <button class="logout  " style="margin-left: 740px; margin-top: 6px; position: fixed;" (click)="logOut()">LogOut <i  style='font-size:24px; ' class='fa fa-sign-out ' ></i> </button>
+
+    </ul>
+
+</nav>
+ </body>
+</html>

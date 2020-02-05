@@ -1,0 +1,34 @@
+<div class="image"></div>
+<div class="contenu container ">
+<form [formGroup]="ajoutForm" (ngSubmit)="onModifier()" >
+    <div class="form-group col-md-6 justify-content-center" >
+        <label for="nom">Nom:</label>
+        <input type="text" name="nom" id="nom" class="form-control " formControlName="nom" />
+    </div>
+    
+    <div class="form-group col-md-6 justify-content-center">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" class="form-control" formControlName="email" />
+    </div>
+  
+    
+    <div class="form-group col-md-6">
+        <label for="adresse">Adresse:</label>
+        <input type="text" name="adresse" id="adresse" class="form-control" formControlName="adresse" />
+    </div>
+  
+    <div class="form-group col-md-6">
+        <label for="tel">Telephone:</label>
+        <input type="text" name="telephone" id="tel" class="form-control" formControlName="telephone" />
+    </div>
+    
+    
+    
+    <button class="btn btn-success">Envoyer</button>
+    
+    <button type="reset" class="btn btn-danger">Annuler</button>
+    <div class="text-center">
+      <button [routerLink]="['/client']" class="text-white" class="btn btn-primary ">Retour</button>
+    </div>
+</form>
+</div>

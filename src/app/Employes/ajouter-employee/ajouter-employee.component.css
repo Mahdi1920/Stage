@@ -1,0 +1,34 @@
+input.ng-valid{    border-left: 2px solid green;}
+input.ng-invalid{    border-left: 2px solid red;} 
+/*body{
+    background :url('/assets/employes2.jpg');
+    background-size: cover;
+    height: 930px ;
+    width: 1519px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+*/
+.image{position: absolute;;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    background: url("/assets/employes2.jpg");
+        background-size: cover;
+    
+        height: 930px;
+        background-color: rgba(0, 0, 0, 0.8);
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);}
+    .contenu{
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    

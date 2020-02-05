@@ -1,0 +1,52 @@
+/*.button {
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 10px;
+    }
+  
+  .button:hover {
+    background-color: rgb(46, 147, 229);
+    box-shadow: 0px 15px 20px rgba(46, 147, 229, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }*/
+  .bouton {
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 10px;
+    }
+  
+  .bouton:hover {
+    background-color: rgb(8, 105, 233);
+    box-shadow: 0px 15px 20px rgba(8, 124, 233, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  .logout {
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 10px;
+    }
+  
+  .logout:hover {
+    background-color: rgb(233, 8, 8);
+    box-shadow: 0px 15px 20px rgba(233, 8, 8, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  a{
+    color: #000;
+    font-weight: bold;
+  }

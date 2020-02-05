@@ -1,0 +1,9 @@
+body{
+    background: url("/assets/employes2.jpg");
+    background-size: cover;
+    height: 752px ;
+    width: 1535px;
+    background-color: rgba(0, 0, 0, 0.3);
+    
+}
+form{padding-top: 100px;}

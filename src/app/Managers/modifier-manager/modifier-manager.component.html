@@ -1,0 +1,53 @@
+<form [formGroup]="ajoutForm" >
+    <div class="form-group">
+        <label for="nom">Nom:</label>
+        <input type="text" name="nom" id="nom" class="form-control" formControlName="nom" />
+    </div>
+     
+    <div class="form-group">
+        <label for="prenom">Prénom:</label>
+        <input type="text" name="prenom" id="prenom" class="form-control" formControlName="prenom" />
+    </div>
+  
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" class="form-control" formControlName="email" />
+    </div>
+  
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" class="form-control" formControlName="username" />
+    </div>
+  
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" class="form-control" formControlName="password" />
+    </div>
+  
+    <div class="form-group">
+        <label for="adresse">Adresse:</label>
+        <input type="text" name="adresse" id="adresse" class="form-control" formControlName="adresse" />
+    </div>
+  
+    <div class="form-group">
+        <label for="naiss">Date de naissance:</label>
+        <input type="date" name="naissance" id="naiss" class="form-control" formControlName="naissance" />
+    </div>
+  
+    <div class="form-group">
+        <label for="tel">Telephone:</label>
+        <input type="text" name="telephone" id="tel" class="form-control" formControlName="telephone" />
+    </div>
+    
+    <div class="form-check-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="genre" value="Homme"formControlName="genre" >Homme
+        </label>
+    </div>
+  
+    <div class="form-check-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="genre" value="Femme" formControlName="genre">Femme
+        </label>
+    </div>
+  </form>

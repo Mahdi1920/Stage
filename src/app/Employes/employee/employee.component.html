@@ -1,0 +1,44 @@
+<html >
+    <head>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+
+<body class="background">
+  
+
+<app-menu></app-menu>
+<div class="image"></div>
+<div class="contenu">
+<h2 class="text-center text-white ">Les Employes</h2>
+<div class="form-group ">
+  <input type="text" class="form-control col-md-2 float-sm-right" placeholder="Search Here" [(ngModel)]="term">
+</div>
+<table  class="table table-bordered table table-striped text-white"  style="font-weight: bolder; background-color: rgba(0, 0, 0, 0.3)" *ngIf="employes.length !=0">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Poste</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employes | filter:term">
+      <td>{{emp.id_employee}}</td>
+      <td>{{emp.nom_employee}}</td>
+      <td>{{emp.prenom_employee}}</td>
+      <td>{{emp.poste}}</td>
+      
+      <td class="btn btn-success" [routerLink]="['/modifierEmployee',emp.id_employee]"  (click)="edit(employe)"><i class='fas fa-user-edit'></i> Editer</td> 
+      <td class="btn btn-danger" mwlConfirmationPopover [popoverTitle]="popoverTitle" [popoverMessage]="popoverMessage" placement="right" (confirm)="supprimer(emp.id_employee)" (cancel)="cancelClicked=true"><i class='fa fa-trash'></i> Supprimer</td>
+      
+    </tr>
+  </tbody>
+</table>
+<div  class="text-center button-group">
+  <button class="btn btn-primary" [routerLink]="['/ajouterEmployee']"><i class="fa fa-plus-square"></i> Ajouter </button>  
+</div>
+</div>
+</body>
+</html>

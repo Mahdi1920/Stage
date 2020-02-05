@@ -1,0 +1,73 @@
+<body>
+<form [formGroup]="ajoutForm " (ngSubmit)="onModifier()" >
+<div class="row justify-content-center">
+  <div class="form-group col-md-4">
+      <label for="nom" style="color: antiquewhite; background-color: rgba(0, 0, 0, 0.5);">Nom:</label>
+      <input type="text" name="nom" id="nom" class="form-control" formControlName="nom" />
+  </div>
+   
+  <div class="form-group col-md-4">
+      <label for="prenom" style="color: antiquewhite; background-color: rgba(0, 0, 0, 0.5);">Prénom:</label>
+      <input type="text" name="prenom" id="prenom" class="form-control" formControlName="prenom" />
+  </div>
+</div>
+<div class="row justify-content-center">
+    <div class="form-group col-md-4">
+      <label for="email" style="color: antiquewhite; background-color: rgba(0, 0, 0, 0.5);">Email:</label>
+      <input type="email" name="email" id="email" class="form-control" formControlName="email" />
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="adresse" style="color: antiquewhite; background-color: rgba(0, 0, 0, 0.5);">Adresse:</label>
+      <input type="text" name="adresse" id="adresse" class="form-control" formControlName="adresse" />
+  </div>
+</div>
+
+  <div class="row justify-content-center">
+  <div class="form-group col-md-4">
+      <label for="naiss" style="color: antiquewhite; background-color: rgba(0, 0, 0, 0.5);">Date de naissance:</label>
+      <input type="date" name="naissance" id="naiss" class="form-control" formControlName="naissance" />
+  </div>
+
+  <div class="form-group col-md-4">
+      <label for="tel" style="color: antiquewhite; background-color: rgba(0, 0, 0, 0.5);">Telephone:</label>
+      <input type="text" name="telephone" id="tel" class="form-control" formControlName="telephone" />
+  </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="form-group col-md-4">
+        <label for="poste" style="color: antiquewhite; background-color: rgba(0, 0, 0, 0.5);">Poste:</label>
+        <input type="text" name="poste" id="poste" class="form-control" formControlName="poste" />
+    </div>
+  
+    <div class="form-group col-md-4">
+        <label for="sal" style="color: antiquewhite; background-color: rgba(0, 0, 0, 0.5);">Salaire:</label>
+        <input type="text" name="salaire" id="sal" class="form-control" formControlName="salaire" />
+    </div>
+    </div>
+    
+    <div class=" row justify-content-center">
+
+  <div class="form-check-inline">
+      <label class="form-check-label"  style="color: antiquewhite; background-color: rgba(0, 0, 0, 0.5);">
+          <input type="radio" class="form-check-input" name="genre" value="Homme"formControlName="genre">Homme
+      </label>
+  </div>
+
+  <div class="form-check-inline">
+      <label class="form-check-label "  style="color: antiquewhite; background-color: rgba(0, 0, 0, 0.5);">
+          <input type="radio" class="form-check-input" name="genre" value="Femme" formControlName="genre">Femme
+      </label>
+  </div>
+    </div>
+<div class=" row justify-content-center">
+  <button class="btn btn-success">Envoyer</button>
+  
+  <button type="reset" class="btn btn-danger">Annuler</button>
+</div><br>
+<div class="text-center">
+    <button [routerLink]="['/Employee']" class="text-white" class="btn btn-primary ">Retour</button>
+  </div>
+
+</form>
+</body>

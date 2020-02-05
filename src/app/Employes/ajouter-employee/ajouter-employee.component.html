@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+<body>
+    <div class="image"></div>
+    <div class="contenu">
+        <h1 style="color: white; background-color: rgba(0, 0, 0, 0.2);" class="text-center">Ajouter Un Employee</h1>
+        <div class="container">
+            <form [formGroup]="ajoutForm" (ngSubmit)="onAjout()" >
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="nom" style="color: white; background-color: rgba(0, 0, 0, 0.5);">Nom:</label>
+                        <input type="text" name="nom" id="nom" class="form-control" placeholder="Nom" formControlName="nom" pattern="[A-Za-z' ']+" />
+                        <div *ngIf="nom.invalid && (nom.dirty || nom.touched)" >
+                            <div *ngIf="nom.errors.required " class="alert alert-danger " >Le Nom est obligatoire </div>  
+                            <div *ngIf="nom.errors.pattern" class="alert alert-danger"> Le Nom doit etre obligatoirement composer par des caractéres alphabétiques </div> 
+                        </div> 
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="prenom" style="color: white; background-color: rgba(0, 0, 0, 0.5);">Prénom:</label>
+                        <input type="text" name="prenom" id="prenom" class="form-control"placeholder="Prenom" formControlName="prenom"  pattern="[A-Za-z' ']+" />
+                        <div *ngIf="prenom.invalid && (prenom.dirty || prenom.touched)">
+                            <div *ngIf="prenom.errors.required " class="alert alert-danger"> Le Prenom est obligatoire </div> 
+                            <div *ngIf="prenom.errors.pattern" class="alert alert-danger"> Le prenom doit etre obligatoirement composer par des caractéres alphabétiques </div> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <label for="email" style="color: white; background-color: rgba(0, 0, 0, 0.5);">Email:</label>
+                    <input type="text" name="email" id="email"  class="form-control" placeholder="Email" formControlName="email" pattern="[A-Za-z0-9.]+@[A-Z a-z.]+" />
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)">
+                        <div *ngIf="email.errors.required " class="alert alert-danger"> Email est obligatoire </div> 
+                        <div *ngIf="email.errors.pattern" class="alert alert-danger"> Email doit etre obligatoirement composer par des caractéres alphanumériques et contenir '@' </div> 
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="adresse" style="color: white; background-color: rgba(0, 0, 0, 0.5);">Adresse:</label>
+                    <input type="text" name="adresse" id="adresse" placeholder="Adresse" class="form-control" formControlName="adresse" />
+                </div>
+
+                <div class="form-group">
+                    <label for="naiss" style="color:white; background-color: rgba(0, 0, 0, 0.5); ">Date de naissance:</label>
+                    <input type="date" name="naissance" id="naiss"  class="form-control" formControlName="naissance" />
+                </div>
+
+                <div class="form-group">
+                    <label for="tel" style="color: white; background-color: rgba(0, 0, 0, 0.5);">Telephone:</label>
+                    <input type="number" name="telephone" id="tel" placeholder="Telephone" class="form-control" formControlName="telephone" />
+                </div>
+                
+                <div class="form-check-inline">
+                    <label class="form-check-label" style="color: white; background-color: rgba(0, 0, 0, 0.5);">
+                        <input type="radio" class="form-check-input" name="genre" value="Homme"formControlName="genre"  >Homme
+                    </label>
+                </div>
+
+                <div class="form-check-inline" style="color: white; background-color: rgba(0, 0, 0, 0.5);">
+                    <label class="form-check-label">
+                        <input type="radio" >Femme
+                    </label>
+                </div>
+
+                <div class="form-group " >
+                    <label for="poste" style="color: white; background-color: rgba(0, 0, 0, 0.5);">Poste:</label>
+                    <input type="text" name="poste" id="poste" class="form-control" placeholder="Poste" formControlName="poste" pattern="[A-Za-z' ']+" />
+                    <div *ngIf="poste.invalid && (poste.dirty || poste.touched)">
+                        <div *ngIf="poste.errors.required " class="alert alert-danger"> Le poste est obligatoire </div> 
+                        <div *ngIf="poste.errors.pattern" class="alert alert-danger"> Le poste doit etre obligatoirement composer par des caractéres alphabétiques </div> 
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="sal" style="color: white; background-color: rgba(0, 0, 0, 0.5);">Salaire:</label>
+                    <input type="text" name="salaire" id="sal" class="form-control" placeholder="Salaire" formControlName="salaire" pattern="[0-9]+"/>
+                    <div *ngIf="salaire.invalid && (salaire.dirty || salaire.touched)">
+                        <div *ngIf="salaire.errors.required " class="alert alert-danger"> Le poste est obligatoire </div> 
+                        <div *ngIf="salaire.errors.pattern" class="alert alert-danger"> Le poste doit etre obligatoirement composer par des caractéres alphabétiques </div> 
+                    </div>
+                </div>
+                
+                <button class="btn btn-success" [disabled]="ajoutForm.invalid">Envoyer</button>
+                <button type="reset" class="btn btn-danger">Annuler</button>   
+            </form>
+            <div class="text-center">
+                <button [routerLink]="['/Employee']" class="text-white" class="btn btn-primary ">Retour</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

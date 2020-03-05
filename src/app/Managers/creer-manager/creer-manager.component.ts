@@ -38,6 +38,7 @@ export class CreerManagerComponent implements OnInit {
     public get email() { return this.creerForm.controls.email; }
     public get username() { return this.creerForm.controls.username; }
     public get password() { return this.creerForm.controls.password; }
+    public get telephone() { return this.creerForm.controls.telephone; }
 
    
 

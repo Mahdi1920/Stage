@@ -41,7 +41,11 @@ export class ModifierEmployerComponent implements OnInit {
   });
 
 }
-
+    public get nom() { return this.ajoutForm.controls.nom; }
+    public get prenom() { return this.ajoutForm.controls.prenom; }
+    public get email() { return this.ajoutForm.controls.email; }
+    public get telephone() { return this.ajoutForm.controls.telephone; }
+   
 onModifier(){
   this.apiService.modifierEmploye(this.ajoutForm.value).subscribe(() => {
     //this.router.navigate(['Employee']);

@@ -17,7 +17,7 @@
 <table  class="table table-bordered table table-striped text-white"  style="font-weight: bolder; background-color: rgba(0, 0, 0, 0.3)" *ngIf="employes.length !=0">
   <thead>
     <tr>
-      <th>ID</th>
+      
       <th>Nom</th>
       <th>Prenom</th>
       <th>Poste</th>
@@ -25,7 +25,6 @@
   </thead>
   <tbody>
     <tr *ngFor="let emp of employes | filter:term">
-      <td>{{emp.id_employee}}</td>
       <td>{{emp.nom_employee}}</td>
       <td>{{emp.prenom_employee}}</td>
       <td>{{emp.poste}}</td>

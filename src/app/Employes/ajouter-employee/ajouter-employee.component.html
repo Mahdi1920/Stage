@@ -46,12 +46,13 @@
 
                 <div class="form-group">
                     <label for="naiss" style="color:white; background-color: rgba(0, 0, 0, 0.5); ">Date de naissance:</label>
-                    <input type="date" name="naissance" id="naiss"  class="form-control" formControlName="naissance" />
+                    <input type="date" name="naissance" id="naiss"  class="form-control" formControlName="naissance" required max="1996-12-31"  min="1980-12-31"/>
+                    
                 </div>
 
                 <div class="form-group">
                     <label for="tel" style="color: white; background-color: rgba(0, 0, 0, 0.5);">Telephone:</label>
-                    <input type="number" name="telephone" id="tel" placeholder="Telephone" class="form-control" formControlName="telephone" />
+                    <input type="text" name="telephone" id="tel" placeholder="Telephone" class="form-control" formControlName="telephone" />
                 </div>
                 
                 <div class="form-check-inline">
@@ -62,7 +63,7 @@
 
                 <div class="form-check-inline" style="color: white; background-color: rgba(0, 0, 0, 0.5);">
                     <label class="form-check-label">
-                        <input type="radio" >Femme
+                        <input type="radio" class="form-check-input" name="genre" value="Femme"formControlName="genre">Femme
                     </label>
                 </div>
 
@@ -79,8 +80,8 @@
                     <label for="sal" style="color: white; background-color: rgba(0, 0, 0, 0.5);">Salaire:</label>
                     <input type="text" name="salaire" id="sal" class="form-control" placeholder="Salaire" formControlName="salaire" pattern="[0-9]+"/>
                     <div *ngIf="salaire.invalid && (salaire.dirty || salaire.touched)">
-                        <div *ngIf="salaire.errors.required " class="alert alert-danger"> Le poste est obligatoire </div> 
-                        <div *ngIf="salaire.errors.pattern" class="alert alert-danger"> Le poste doit etre obligatoirement composer par des caractéres alphabétiques </div> 
+                        <div *ngIf="salaire.errors.required " class="alert alert-danger"> Le salaire est obligatoire </div> 
+                        <div *ngIf="salaire.errors.pattern" class="alert alert-danger"> Le salaire doit etre obligatoirement composer par des chiffres et peut etre réelle </div> 
                     </div>
                 </div>
                 

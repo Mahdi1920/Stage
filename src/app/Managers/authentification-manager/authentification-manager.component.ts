@@ -22,6 +22,7 @@ export class AuthentificationManagerComponent implements OnInit {
               private router: Router,
               private apiService: ManagerServiceService) { }
    ngOnInit() {
+    window.localStorage.removeItem('token');
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.compose([Validators.required])],
       password: ['', Validators.required]

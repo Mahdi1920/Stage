@@ -11,12 +11,11 @@
 <div class="contenu">
 <h2 class="text-center">Les Clients</h2>
 <div class="form-group ">
-  <i class="fa fa-search" style="margin-left :1230px ;"></i><input type="text" class="form-control col-md-2 float-sm-right  " placeholder="Search Here" [(ngModel)]="term">
+  <input type="text" class="form-control col-md-2 float-sm-right  " placeholder="Search Here" [(ngModel)]="term">
 </div>
 <table class="table table-bordered table table-striped" *ngIf="clients.length !=0">
     <thead>
     <tr>
-      <th>ID</th>
       <th>Nom</th>
       <th>Email</th>
       <th>Adresse</th>
@@ -26,7 +25,6 @@
 <tbody>
   
     <tr *ngFor="let client of clients | filter:term" style="font-weight: bold;" class="text-white">
-      <td>{{client.id_client}}</td>
       <td>{{client.nom_client}}</td>
       <td>{{client.email_client}}</td>
       <td>{{client.adresse_client}}</td>

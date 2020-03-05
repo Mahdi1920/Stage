@@ -3,18 +3,30 @@
 <div class="row justify-content-center">
   <div class="form-group col-md-4">
       <label for="nom" style="color: antiquewhite; background-color: rgba(0, 0, 0, 0.5);">Nom:</label>
-      <input type="text" name="nom" id="nom" class="form-control" formControlName="nom" />
+      <input type="text" name="nom" id="nom" class="form-control" formControlName="nom" required pattern="[A-Za-z' ']+"/>
+  </div>
+  <div *ngIf="nom.invalid && (nom.dirty || nom.touched)">
+    <div *ngIf="nom.errors.required " class="alert alert-danger"> Nom est obligatoire </div> 
+    <div *ngIf="nom.errors.pattern" class="alert alert-danger"> Nom doit etre obligatoirement composer par des caractéres</div> 
   </div>
    
   <div class="form-group col-md-4">
       <label for="prenom" style="color: antiquewhite; background-color: rgba(0, 0, 0, 0.5);">Prénom:</label>
-      <input type="text" name="prenom" id="prenom" class="form-control" formControlName="prenom" />
+      <input type="text" name="prenom" id="prenom" class="form-control" formControlName="prenom" pattern="[A-Za-z' ']+" />
+  </div>
+  <div *ngIf="prenom.invalid && (prenom.dirty || prenom.touched)">
+    <div *ngIf="prenom.errors.required " class="alert alert-danger"> Le Prenom est obligatoire </div> 
+    <div *ngIf="prenom.errors.pattern" class="alert alert-danger"> Le prenom doit etre obligatoirement composer par des caractéres alphabétiques </div> 
   </div>
 </div>
 <div class="row justify-content-center">
     <div class="form-group col-md-4">
       <label for="email" style="color: antiquewhite; background-color: rgba(0, 0, 0, 0.5);">Email:</label>
-      <input type="email" name="email" id="email" class="form-control" formControlName="email" />
+      <input type="email" name="email" id="email" class="form-control" formControlName="email" pattern="[A-Za-z0-9.]+@[A-Z a-z0-9.]+" />
+    </div>
+    <div *ngIf="email.invalid && (email.dirty || email.touched)">
+      <div *ngIf="email.errors.required " class="alert alert-danger"> Email est obligatoire </div> 
+      <div *ngIf="email.errors.pattern" class="alert alert-danger"> Email doit etre obligatoirement composer par des caractéres alphanumériques et contenir '@' </div> 
     </div>
 
     <div class="form-group col-md-4">
@@ -31,7 +43,7 @@
 
   <div class="form-group col-md-4">
       <label for="tel" style="color: antiquewhite; background-color: rgba(0, 0, 0, 0.5);">Telephone:</label>
-      <input type="text" name="telephone" id="tel" class="form-control" formControlName="telephone" />
+      <input type="text" name="telephone" id="tel" class="form-control" formControlName="telephone" maxlength="11" minlength="8"/>
   </div>
   </div>
   <div class="row justify-content-center">
@@ -61,7 +73,7 @@
   </div>
     </div>
 <div class=" row justify-content-center">
-  <button class="btn btn-success">Envoyer</button>
+  <button class="btn btn-success"  >Envoyer</button>
   
   <button type="reset" class="btn btn-danger">Annuler</button>
 </div><br>

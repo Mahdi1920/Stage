@@ -29,6 +29,7 @@ export class EmployeesService {
   }
   modifierEmploye(employe: Employe){
     return this.http.post<ApiRest>(this.baseUrl + '/updateEmploye.php',employe);
+    window.location.reload();
   }
 
   supprimerEmploye(id: number):Observable<ApiRest> {

@@ -9,7 +9,7 @@
             <input type="text" name="nom" id="nom" class="form-control" formControlName="nom" pattern="[A-Za-z' ']+" />
             <div *ngIf="nom.invalid && (nom.dirty || nom.touched)">
                 <div *ngIf="nom.errors.required " class="alert alert-danger"> Nom est obligatoire </div> 
-                <div *ngIf="nom.errors.pattern" class="alert alert-danger"> Nom doit etre obligatoirement composer par des caractéres alphanumériques</div> 
+                <div *ngIf="nom.errors.pattern" class="alert alert-danger"> Nom doit etre obligatoirement composer par des caractéres</div> 
             </div>
         </div>
 
@@ -30,7 +30,7 @@
 
         <div class="form-group">
             <label for="tel" style="background-color: rgba(0, 0, 0, 0.2); color: white;">Telephone:</label>
-            <input type="number" name="telephone" id="tel" class="form-control" formControlName="telephone" />
+            <input type="text" name="telephone" id="tel" class="form-control" formControlName="telephone" />
         </div>
         
         <button class="btn btn-success" [disabled]="ajoutForm.invalid">Envoyer</button>

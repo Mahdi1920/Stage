@@ -54,12 +54,16 @@
 
         <div class="form-group">
             <label for="naiss">Date de naissance:</label>
-            <input type="date" name="naissance" id="naiss" class="form-control" formControlName="naissance" />
+            <input type="date" name="naissance" id="naiss" class="form-control" formControlName="naissance" required />
         </div>
 
         <div class="form-group">
             <label for="tel">Telephone:</label>
-            <input type="number" name="telephone" id="tel" class="form-control" formControlName="telephone" />
+            <input type="text" name="telephone" id="tel" class="form-control" formControlName="telephone" maxlength="11" minlength="8"/>
+        </div>
+        <div *ngIf="telephone.invalid && (telephone.dirty || telephone.touched)">
+            <div *ngIf="telephone.errors.required " class="alert alert-danger"> Telephone est obligatoire </div> 
+            <div *ngIf="telephone.errors.minlength " class="alert alert-danger"> Telephone doit etre minimum de longueur 8 et maximum de longueur 11 </div> 
         </div>
         
         <div class="form-check-inline">
@@ -74,7 +78,7 @@
             </label>
         </div>
         <br>
-        <button class="btn btn-success" >Envoyer</button>
+        <button class="btn btn-success" disabled="creerForm.invalid">Envoyer</button>
         <button type="reset" class="btn btn-danger">Annuler</button>
         
     </form>

@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.13",
     "angular-confirmation-popover": "^4.2.1",
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ng2-search-filter": "^0.5.1",
     "rxjs": "~6.4.0",
     "save": "^2.4.0",
